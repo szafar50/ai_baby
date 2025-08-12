@@ -1,0 +1,64 @@
+.\venv\Scripts\activate    in   C:\new_chat_app
+
+versions installed 
+Python 3.13.1
+fastapi           0.116.1
+uvicorn           0.35.0
+
+
+✅ Commit often:
+bash
+
+
+1
+2
+3
+git add .
+git commit -m "Added model warm-up logic"
+git push
+✅ You’re not behind — you’re learning real workflow.
+
+uvicorn main:app --reload --port 8000     ---  starting fastapr in  backend\src
+crime suspect Mr. John was not present at his office at the time of crime as he claimed
+
+curl http://localhost:8000 , developer mode instead of browser
+
+http://localhost:8000/docs to see FastAPI’s interactive Swagger UI.
+
+Ollama provides a local HTTP server (running on http://localhost:11434) that exposes an API to interact with models like Mistral.
+
+If issues are found, you’ll see warnings/errors. Fix them manually or use npm run lint -- --fix (if supported) to auto-fix some issues.
+
+4. Common Scenarios and Frameworks
+The exact behavior of npm run dev depends on your project’s framework or setup. Here are examples:
+
+Next.js:
+"dev": "next dev" starts a server at http://localhost:3000 with hot-reloading.
+No need for npm run lint to start the server.
+Vite:
+"dev": "vite" starts a fast development server (e.g., http://localhost:5173).
+Linting is separate and optional.
+React with Create React App:
+"dev": "react-scripts start" starts the server at http://localhost:3000.
+Linting may be built into the dev process, but npm run lint is still separate.
+Node.js/Express:
+"dev": "nodemon server.js" starts a Node.js server with auto-restart on changes.
+Linting is optional and separate.
+
+Because in your code, you're not using real Llama — you're using a fake name mapped to distilbert.
+
+In main.py, you have:
+
+python
+
+
+1
+2
+3
+4
+⌄
+MODEL_MAPPING = {
+    "Llama": {"use": "distilbert", "style": "direct, open, and technical"},
+    ...
+}
+So when the frontend sends "Llama" as a model name, the backend uses distilgpt2 (via distilbert pipeline) to generate a fake response.
