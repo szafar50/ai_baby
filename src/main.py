@@ -100,7 +100,7 @@ async def get_messages():
         response = supabase.table("messages") \
             .select("*") \
             .order("timestamp", desc=True) \
-            .limit(6) \
+            .limit(2) \
             .execute()
         messages_data = list(reversed(response.data or []))
         messages = [
